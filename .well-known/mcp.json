@@ -8,7 +8,7 @@
   "company_homepage": "https://useallowance.com",
   "homepage": "https://useallowance.com/mcp",
   "assets": {
-    "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-mark.svg",
+    "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png",
     "icon_png": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png",
     "social_card": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/social-card.png"
   },

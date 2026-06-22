@@ -7,7 +7,7 @@
   "description": "Payment security for AI agents. Allowance lets agents request scoped human approval, receive limited virtual cards, complete checkout, and report receipts without exposing the human's real card.",
   "homepage": "https://useallowance.com/mcp",
   "repository": "https://github.com/useallowance/allowance-mcp-public",
-  "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-mark.svg",
+  "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png",
   "image": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/social-card.png",
   "type": "mcp_server",
   "status": "stable",
