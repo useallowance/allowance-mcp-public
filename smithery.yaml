@@ -24,7 +24,7 @@ transport:
   url: https://mcp.useallowance.com
 auth:
   type: oauth2
-icon: https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png
+icon: https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-logo-green-bg.jpg
 image: https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/social-card.png
 documentation:
   website: https://useallowance.com

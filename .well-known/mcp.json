@@ -8,8 +8,9 @@
   "company_homepage": "https://useallowance.com",
   "homepage": "https://useallowance.com/mcp",
   "assets": {
-    "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png",
-    "icon_png": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png",
+    "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-logo-green-bg.jpg",
+    "logo": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-logo-green-bg.jpg",
+    "icon_png": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-logo-green-bg.png",
     "social_card": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/social-card.png"
   },
   "registry": {

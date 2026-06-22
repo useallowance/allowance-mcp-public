@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://useallowance.com">
-    <img src="assets/icon-192.png" alt="Allowance" width="96">
+    <img src="assets/allowance-logo-green-bg.jpg" alt="Allowance" width="96">
   </a>
 </p>
 
