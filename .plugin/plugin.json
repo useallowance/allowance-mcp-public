@@ -1,6 +1,6 @@
 {
   "name": "allowance-mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Payment security for AI agents. Allowance lets agents request scoped human approval, receive limited virtual cards, complete checkout, and report receipts without exposing the human's real card.",
   "author": {
     "name": "Allowance",

@@ -2,12 +2,12 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.useallowance/allowance-mcp",
   "title": "Allowance MCP",
-  "description": "Payment security for AI agents: request scoped human approval, issue limited virtual cards, complete checkout, and report receipts without exposing the human's real card.",
+  "description": "Payment security for AI agents with scoped approvals, virtual cards, receipts, and audit trails.",
   "repository": {
     "url": "https://github.com/useallowance/allowance-mcp-public",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "remotes": [
     {
       "type": "streamable-http",
