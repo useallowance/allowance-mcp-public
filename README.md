@@ -15,13 +15,15 @@ This repository is the public listing and configuration home for the hosted Allo
 
 ## Authentication
 
-Allowance MCP requires an Allowance connection token:
+Allowance MCP uses OAuth. Connect your MCP client to `https://mcp.useallowance.com` and complete the Allowance OAuth flow when prompted.
+
+After OAuth completes, MCP clients send the issued bearer token on tool calls:
 
 ```text
 Authorization: Bearer ak_...
 ```
 
-Connection tokens are issued through Allowance setup/OAuth. Do not commit tokens, card credentials, or checkout PII.
+Do not create or paste a standalone API key for normal MCP use. Do not commit tokens, card credentials, or checkout PII.
 
 ## Core Flow
 

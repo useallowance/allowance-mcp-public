@@ -15,7 +15,7 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer Allowance connection token issued through Allowance OAuth/setup.",
+          "description": "OAuth-issued Allowance bearer token.",
           "isRequired": true,
           "isSecret": true
         }
