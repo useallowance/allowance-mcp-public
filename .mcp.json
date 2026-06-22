@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "allowance": {
+      "type": "http",
+      "url": "https://mcp.useallowance.com"
+    }
+  },
+  "inputs": []
+}
