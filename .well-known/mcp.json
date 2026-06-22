@@ -5,7 +5,13 @@
   "description": "Payment security for AI agents. Agents request scoped human approval, receive limited virtual cards, complete checkout, and report receipts without seeing the human's real card.",
   "status": "active",
   "contact": "hello@useallowance.com",
+  "company_homepage": "https://useallowance.com",
   "homepage": "https://useallowance.com/mcp",
+  "assets": {
+    "icon": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/allowance-mark.svg",
+    "icon_png": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/icon-192.png",
+    "social_card": "https://raw.githubusercontent.com/useallowance/allowance-mcp-public/main/assets/social-card.png"
+  },
   "registry": {
     "name": "com.useallowance/allowance-mcp",
     "url": "https://registry.modelcontextprotocol.io/v0.1/servers/com.useallowance%2Fallowance-mcp/versions/latest"
@@ -16,10 +22,10 @@
     "active": true
   },
   "auth": {
-    "type": "bearer",
+    "type": "oauth2",
     "header": "Authorization",
-    "format": "Bearer ak_...",
-    "note": "Use an Allowance connection token issued through Allowance setup/OAuth."
+    "format": "Bearer <OAuth-issued token>",
+    "note": "Complete Allowance OAuth from your MCP client. The client sends the OAuth-issued bearer token on tool calls."
   },
   "flow": {
     "summary": "Create an allowance request for a purchase, wait for phone approval, then complete checkout in local or remote mode.",

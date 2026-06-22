@@ -1,8 +1,18 @@
 # Allowance MCP
 
-Allowance MCP lets AI agents request scoped human approval for purchases, receive limited virtual cards, complete checkout, and report receipts without seeing the human's real card.
+<p>
+  <a href="https://useallowance.com">
+    <img src="assets/allowance-mark.svg" alt="Allowance" width="96">
+  </a>
+</p>
+
+[Allowance](https://useallowance.com) is a payment security layer for AI agents. It lets humans approve scoped purchases on their phone while agents complete checkout with limited-use payment credentials instead of the human's real card.
+
+Allowance MCP exposes that flow to MCP clients: agents can request approval for a specific purchase, receive a scoped virtual card after approval, complete checkout, and report receipts and final charged amounts back into an audit trail.
 
 This repository is the public listing and configuration home for the hosted Allowance MCP server. The implementation repository is private.
+
+![Allowance MCP social preview](assets/social-card.png)
 
 ## Hosted Server
 
@@ -10,6 +20,7 @@ This repository is the public listing and configuration home for the hosted Allo
 - Transport: `streamable-http`
 - Official registry name: `com.useallowance/allowance-mcp`
 - Official registry URL: `https://registry.modelcontextprotocol.io/v0.1/servers/com.useallowance%2Fallowance-mcp/versions/latest`
+- Company site: `https://useallowance.com`
 - Discovery metadata: `https://useallowance.com/.well-known/mcp.json`
 - Product docs: `https://useallowance.com/mcp`
 
@@ -17,13 +28,7 @@ This repository is the public listing and configuration home for the hosted Allo
 
 Allowance MCP uses OAuth. Connect your MCP client to `https://mcp.useallowance.com` and complete the Allowance OAuth flow when prompted.
 
-After OAuth completes, MCP clients send the issued bearer token on tool calls:
-
-```text
-Authorization: Bearer ak_...
-```
-
-Do not create or paste a standalone API key for normal MCP use. Do not commit tokens, card credentials, or checkout PII.
+After OAuth completes, MCP clients send the issued bearer token on tool calls. Users should not create or paste standalone API keys for normal MCP use. Do not commit tokens, card credentials, or checkout PII.
 
 ## Core Flow
 
@@ -33,6 +38,14 @@ Do not create or paste a standalone API key for normal MCP use. Do not commit to
 4. The agent reports success or failure, including receipt and charged amount details when available.
 
 Human phone approval is the spending authorization. After approval, agents should not ask for another final confirmation unless the realized total exceeds the approved cap, checkout requires unavailable information, or the item materially differs from the approved request.
+
+## What Allowance Controls
+
+- Spend scope: merchant, amount cap, purchase reason, and expiration.
+- Payment exposure: agents get limited payment credentials instead of the human's real card.
+- Checkout data: approved contact, shipping, and billing fields are available only when needed for checkout.
+- Auditability: requests, approvals, card issuance, purchase attempts, receipts, and failures are recorded.
+- Revocation: humans can pause or revoke allowances instead of leaving broad payment access with an agent.
 
 ## Tools
 
