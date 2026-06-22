@@ -1,0 +1,125 @@
+{
+  "schema_version": "2024-11-05",
+  "name": "allowance-mcp",
+  "display_name": "Allowance MCP",
+  "description": "Payment security for AI agents. Agents request scoped human approval, receive limited virtual cards, complete checkout, and report receipts without seeing the human's real card.",
+  "status": "active",
+  "contact": "hello@useallowance.com",
+  "homepage": "https://useallowance.com/mcp",
+  "registry": {
+    "name": "com.useallowance/allowance-mcp",
+    "url": "https://registry.modelcontextprotocol.io/v0.1/servers/com.useallowance%2Fallowance-mcp/versions/latest"
+  },
+  "server": {
+    "transport": "streamable-http",
+    "url": "https://mcp.useallowance.com",
+    "active": true
+  },
+  "auth": {
+    "type": "bearer",
+    "header": "Authorization",
+    "format": "Bearer ak_...",
+    "note": "Use an Allowance connection token issued through Allowance setup/OAuth."
+  },
+  "flow": {
+    "summary": "Create an allowance request for a purchase, wait for phone approval, then complete checkout in local or remote mode.",
+    "local_checkout": "After approval, the agent uses contact, shipping, billing, card, and result-reporting tools to complete checkout in its browser session.",
+    "remote_checkout": "If the approved request returns checkout_mode='remote', Allowance completes checkout and the agent waits with wait_for_remote_fulfillment.",
+    "human_gate": "The human approval on phone is the spending authorization. After approval, the agent should not ask for another final confirmation unless the realized total exceeds the approved cap or checkout requires unavailable information."
+  },
+  "tools": [
+    {
+      "name": "send_allowance_request",
+      "description": "Create a human approval request for a scoped purchase allowance."
+    },
+    {
+      "name": "poll_allowance_request",
+      "description": "Check the current status of an allowance request once."
+    },
+    {
+      "name": "wait_for_allowance_request",
+      "description": "Wait for a request to be approved, denied, canceled, expired, failed, or timed out."
+    },
+    {
+      "name": "get_allowance_request",
+      "description": "Fetch details for one allowance request."
+    },
+    {
+      "name": "list_allowance_requests",
+      "description": "List allowance requests for the connected account."
+    },
+    {
+      "name": "cancel_allowance_request",
+      "description": "Cancel a pending allowance request."
+    },
+    {
+      "name": "get_contact_details",
+      "description": "Fetch non-secret checkout contact fields such as name, email, and phone."
+    },
+    {
+      "name": "get_allowance_shipping_address",
+      "description": "Fetch the approved shipping address for an allowance that requires shipping."
+    },
+    {
+      "name": "get_allowance_billing_address",
+      "description": "Fetch billing address fields for checkout."
+    },
+    {
+      "name": "issue_allowance_card",
+      "description": "Issue payment credentials for an approved local-checkout allowance."
+    },
+    {
+      "name": "complete_purchase_auth",
+      "description": "Fetch card credentials after required phone authorization for a purchase attempt."
+    },
+    {
+      "name": "report_purchase_success",
+      "description": "Report a completed purchase and charged amount."
+    },
+    {
+      "name": "report_purchase_failure",
+      "description": "Report a failed purchase attempt with error details."
+    },
+    {
+      "name": "list_allowance_purchase_attempts",
+      "description": "List purchase attempts for an allowance."
+    },
+    {
+      "name": "get_allowance",
+      "description": "Fetch details for a specific allowance."
+    },
+    {
+      "name": "wait_for_remote_fulfillment",
+      "description": "Wait for Allowance-owned remote checkout to finish or request human input."
+    },
+    {
+      "name": "reply_to_remote_fulfillment_message",
+      "description": "Send the human's reply to a remote fulfillment prompt."
+    },
+    {
+      "name": "list_allowances",
+      "description": "List allowances for the connected account."
+    },
+    {
+      "name": "pause_allowance",
+      "description": "Pause an allowance."
+    },
+    {
+      "name": "revoke_allowance",
+      "description": "Revoke an allowance."
+    },
+    {
+      "name": "list_supported_merchants",
+      "description": "List merchants that support no-browser remote checkout."
+    },
+    {
+      "name": "check_merchant",
+      "description": "Check whether a merchant URL can be purchased from the current session."
+    }
+  ],
+  "examples": [
+    "https://useallowance.com/mcp",
+    "https://mcp.useallowance.com/.well-known/oauth-protected-resource",
+    "https://mcp.useallowance.com/.well-known/oauth-authorization-server"
+  ]
+}

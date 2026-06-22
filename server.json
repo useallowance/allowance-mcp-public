@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.useallowance/allowance-mcp",
+  "title": "Allowance MCP",
+  "description": "Secure agent purchasing with human-approved virtual cards, receipts, and audit trails.",
+  "repository": {
+    "url": "https://github.com/useallowance/allowance-mcp-public",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.useallowance.com",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer Allowance connection token issued through Allowance OAuth/setup.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
