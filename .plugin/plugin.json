@@ -1,0 +1,20 @@
+{
+  "name": "allowance-mcp",
+  "version": "0.1.2",
+  "description": "Secure agent purchasing with human-approved virtual cards, receipts, and audit trails.",
+  "author": {
+    "name": "Allowance",
+    "email": "hello@useallowance.com",
+    "url": "https://useallowance.com"
+  },
+  "homepage": "https://useallowance.com/mcp",
+  "repository": "https://github.com/useallowance/allowance-mcp-public",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "payments",
+    "oauth",
+    "agent-purchasing",
+    "virtual-cards"
+  ]
+}
