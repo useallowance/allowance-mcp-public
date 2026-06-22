@@ -1,0 +1,46 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "useallowance"
+  ],
+  "name": "allowance-mcp",
+  "description": "Secure agent purchasing with human-approved virtual cards, receipts, and audit trails.",
+  "type": "mcp_server",
+  "status": "stable",
+  "framework": "FastMCP",
+  "tools": 22,
+  "transport": [
+    "http"
+  ],
+  "keywords": [
+    "mcp",
+    "payments",
+    "oauth",
+    "agent-purchasing",
+    "virtual-cards"
+  ],
+  "mcpServers": {
+    "allowance": {
+      "type": "http",
+      "url": "https://mcp.useallowance.com",
+      "description": "OAuth-protected remote MCP server for Allowance agent purchasing."
+    }
+  },
+  "features": {
+    "agent_purchasing": {
+      "enabled": true,
+      "capabilities": [
+        "human_approval",
+        "virtual_cards",
+        "receipts",
+        "audit_trails"
+      ]
+    },
+    "authentication": {
+      "enabled": true,
+      "capabilities": [
+        "oauth2"
+      ]
+    }
+  }
+}
